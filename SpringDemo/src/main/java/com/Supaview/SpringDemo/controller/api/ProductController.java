@@ -31,7 +31,7 @@ public class ProductController {
 		this.productService = productService;
 	}
 
-	@GetMapping("products")
+	@GetMapping("Tproducts")
 	public String getAllProducts(Model model) {
 		List<Product> products = productService.getAllProduct();
 		model.addAttribute("products", products);

@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/products")
 public class ProductRestController {
 
 	private ProductService productService;
@@ -33,7 +33,7 @@ public class ProductRestController {
 	}
 
 	@GetMapping
-	public List<Product> getallProduct() {
+	public List<Product> getAllProduct() {
 		return productService.getAllProduct();
 	}
 

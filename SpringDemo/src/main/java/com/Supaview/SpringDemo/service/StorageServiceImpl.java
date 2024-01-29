@@ -38,11 +38,13 @@ public class StorageServiceImpl implements StorageService {
 	public String Store(MultipartFile file) {
 
 		if (file == null) {
-
 			return null;
 		}
 
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
+		if(filename =="") {
+			return null;
+		}
 		try {
 			if (filename.contains("..")) {
 				throw new StorageException("path outside current directory ");
